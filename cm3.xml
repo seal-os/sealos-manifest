@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="yocto"
+           fetch="git://git.yoctoproject.org" />
+
+  <remote  name="openembedded"
+           fetch="git://git.openembedded.org" />
+
+  <default revision="dunfell"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+
+  <project path="build-sealos-cm3" name="seal-os/build-sealos-cm3"/>
+  <project path="poky" name="poky" remote="yocto" />
+  <project path="meta-openembedded" name="meta-openembedded" remote="openembedded" />
+  <project path="meta-raspberrypi" name="agherzan/meta-raspberrypi" />
+  <project path="meta-sealos" name="seal-os/meta-sealos" />
+  <project path="meta-rauc" name="rauc/meta-rauc" />
+
+</manifest>
